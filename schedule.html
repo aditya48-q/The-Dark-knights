@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Schedule - ProtoLearn</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header"><h2>ProtoLearn</h2></div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="nav-item" data-page="dashboard"><span class="nav-icon">📊</span><span class="nav-text">Dashboard</span></a>
+      <a href="schedule.html" class="nav-item active" data-page="schedule"><span class="nav-icon">📅</span><span class="nav-text">My Schedule</span></a>
+      <a href="#" class="nav-item" data-page="suggestions"><span class="nav-icon">✨</span><span class="nav-text">Smart Suggestions</span></a>
+      <a href="#" class="nav-item" data-page="collaboration"><span class="nav-icon">👥</span><span class="nav-text">Collaboration</span></a>
+      <a href="#" class="nav-item" data-page="tracker"><span class="nav-icon">📈</span><span class="nav-text">Growth Tracker</span></a>
+      <a href="#" class="nav-item" data-page="settings"><span class="nav-icon">⚙️</span><span class="nav-text">Settings</span></a>
+    </nav>
+    <div class="sidebar-footer"><a href="index.html" class="back-link">← Back to Home</a></div>
+  </aside>
+
+  <main class="main-content">
+    <header class="dashboard-header fm-motion" data-fm>
+      <div class="header-left">
+        <h1 class="header-title">My Schedule</h1>
+        <p class="header-greeting">Plan your day — make downtime count</p>
+      </div>
+      <div class="header-right">
+        <span class="current-date" id="currentDate"></span>
+        <button class="notification-bell">🔔</button>
+      </div>
+    </header>
+
+    <div class="dashboard-grid">
+      <section class="card fm-motion" data-fm>
+        <div class="card-header"><h3 class="card-title">Week Overview</h3><div class="card-badge">This Week</div></div>
+        <div class="card-content">
+          <div class="week-toggle" style="display:flex;gap:8px;margin-bottom:12px;">
+            <button class="btn-start" style="width:auto;padding:6px 10px;">Week</button>
+            <button class="btn-start" style="width:auto;padding:6px 10px;">Day</button>
+          </div>
+
+          <div class="week-grid" style="display:flex;gap:8px;">
+            <div class="mini-day">Mon<br><small class="muted">2 free slots</small></div>
+            <div class="mini-day">Tue<br><small class="muted">1 free slot</small></div>
+            <div class="mini-day">Wed<br><small class="muted">3 free slots</small></div>
+            <div class="mini-day">Thu<br><small class="muted">0 free</small></div>
+            <div class="mini-day">Fri<br><small class="muted">2 free slots</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card fm-motion" data-fm>
+        <div class="card-header"><h3 class="card-title">Today's Timeline</h3></div>
+        <div class="card-content" id="timelineList">
+          <!-- timeline items injected by schedule.js -->
+        </div>
+      </section>
+
+      <section class="card fm-motion" data-fm>
+        <div class="card-header"><h3 class="card-title">Quick Add</h3></div>
+        <div class="card-content">
+          <form id="quickAddForm">
+            <input type="text" id="quickTitle" placeholder="Activity title" required>
+            <div style="display:flex;gap:8px;margin-top:8px;margin-bottom:8px;">
+              <input type="time" id="quickStart" required>
+              <input type="time" id="quickEnd" required>
+            </div>
+            <button class="btn-start" type="submit">Add to Schedule</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="card fm-motion" data-fm>
+        <div class="card-header"><h3 class="card-title">Sync & Export</h3></div>
+        <div class="card-content">
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span class="muted">Google Calendar</span><button class="btn-start" style="width:auto;padding:6px 10px;">Connect</button></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span class="muted">Export (.ics)</span><button class="btn-start" style="width:auto;padding:6px 10px;">Export</button></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="dashboard-footer"><p>Hackathon Prototype – Demo Only</p></footer>
+  <script src="schedule.js"></script>
+</body>
+</html>
