@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ProtoLearn</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>ProtoLearn</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" data-page="schedule">
+                <span class="nav-icon">📅</span>
+                <span class="nav-text">My Schedule</span>
+            </a>
+            <a href="#" class="nav-item" data-page="suggestions">
+                <span class="nav-icon">✨</span>
+                <span class="nav-text">Smart Suggestions</span>
+            </a>
+            <a href="#" class="nav-item" data-page="collaboration">
+                <span class="nav-icon">👥</span>
+                <span class="nav-text">Collaboration</span>
+            </a>
+            <a href="#" class="nav-item" data-page="tracker">
+                <span class="nav-icon">📈</span>
+                <span class="nav-text">Growth Tracker</span>
+            </a>
+            <a href="#" class="nav-item" data-page="settings">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+        <!-- TOP HEADER -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1 class="header-title">Adaptive Time Utilisation Dashboard</h1>
+                <p class="header-greeting">Welcome back, Student 👋</p>
+            </div>
+            <div class="header-right">
+                <span class="current-date" id="currentDate"></span>
+                <button class="notification-bell">🔔</button>
+            </div>
+        </header>
+
+        <!-- DASHBOARD CARDS CONTAINER -->
+        <div class="dashboard-grid">
+            <!-- FREE TIME SLOTS CARD -->
+            <section class="card card-free-time">
+                <div class="card-header">
+                    <h3 class="card-title">⏰ Free Time Slots Detected</h3>
+                    <span class="card-badge">Today</span>
+                </div>
+                <div class="card-content">
+                    <div id="freeTimeSlots"></div>
+                </div>
+            </section>
+
+            <!-- AI RECOMMENDED ACTIVITIES -->
+            <section class="card card-recommendations">
+                <div class="card-header">
+                    <h3 class="card-title">🤖 AI-Recommended Activities</h3>
+                    <span class="card-badge">Personalized</span>
+                </div>
+                <div class="card-content">
+                    <div id="recommendedActivities"></div>
+                </div>
+            </section>
+
+            <!-- PRODUCTIVITY INSIGHTS -->
+            <section class="card card-insights">
+                <div class="card-header">
+                    <h3 class="card-title">📊 Productivity Insights</h3>
+                </div>
+                <div class="card-content">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Free time used productively this week</span>
+                            <span class="progress-value" id="productivityValue">78%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="productivityBar" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    <div class="insights-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Activities Completed</span>
+                            <span class="stat-value">12</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Hours Saved</span>
+                            <span class="stat-value">8.5</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Skills Learned</span>
+                            <span class="stat-value">5</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTEGRATIONS SECTION -->
+            <section class="card card-integrations">
+                <div class="card-header">
+                    <h3 class="card-title">🔗 Active Integrations</h3>
+                </div>
+                <div class="card-content">
+                    <div class="integrations-grid">
+                        <div class="integration-item">
+                            <span class="integration-icon">📅</span>
+                            <span class="integration-name">Google Calendar</span>
+                            <span class="integration-status">Connected</span>
+                        </div>
+                        <div class="integration-item">
+                            <span class="integration-icon">✅</span>
+                            <span class="integration-name">Google Tasks</span>
+                            <span class="integration-status">Connected</span>
+                        </div>
+                        <div class="integration-item">
+                            <span class="integration-icon">📹</span>
+                            <span class="integration-name">Google Meet</span>
+                            <span class="integration-status">Connected</span>
+                        </div>
+                        <div class="integration-item">
+                            <span class="integration-icon">🧠</span>
+                            <span class="integration-name">AI Engine</span>
+                            <span class="integration-status">Active</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="dashboard-footer">
+        <p>Hackathon Prototype – Demo Only</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

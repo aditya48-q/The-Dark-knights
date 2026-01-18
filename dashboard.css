@@ -1,0 +1,63 @@
+/* Glacier Theme CSS */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: #e0f7fa;
+    padding: 20px;
+    width: 250px;
+    float: left;
+}
+
+.sidebar-header h2 {
+    color: #00796b;
+}
+
+.sidebar-nav .nav-item {
+    display: block;
+    padding: 10px;
+    color: #00796b;
+    text-decoration: none;
+}
+
+.sidebar-nav .nav-item:hover {
+    background-color: #b2ebf2;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.dashboard-header {
+    background-color: #b2ebf2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 10px 0;
+}
+
+.dashboard-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #b2ebf2;
+}
